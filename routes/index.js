@@ -1,11 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
-
-
-//---var user = require('./user/index');
-
-
+var user = require('./user/index');
 
 
 var isAuthenticated = function (req, res, next) {
@@ -20,7 +15,7 @@ var isAuthenticated = function (req, res, next) {
 
 module.exports = function(passport){
 
-    //router.use('user', user);
+    router.use('/user', user);
     
     
     
